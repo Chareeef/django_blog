@@ -1,6 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render
-from django.views.generic import CreateView, DetailView, ListView, UpdateView
+from django.views.generic import (CreateView, DetailView, ListView,
+                                  UpdateView, DeleteView)
 from .models import Post
 
 
@@ -37,6 +38,19 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """
     model = Post
     fields = ['title', 'content']
+
+    def test_func(self):
+        """Check that the post's author is the logged in user
+        """
+        post = self.get_object()
+        return post.author == self.request.user
+
+
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """Post delete view
+    """
+    model = Post
+    success_url = "/"
 
     def test_func(self):
         """Check that the post's author is the logged in user

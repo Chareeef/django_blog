@@ -93,7 +93,17 @@ a {
 }
 
 .btn {
-  background-color: white;
+  background-color: #fff;
   color: firebrick;
   border-color: firebrick;
+}
+
+.btn-danger {
+  background-color: #b02222;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: grey;
+  color: white;
 }
