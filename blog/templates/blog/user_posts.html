@@ -1,4 +1,8 @@
-{% extends "blog/base.html" %} {% block content %} {% for post in posts %}
+{% extends "blog/base.html" %} {% block content %}
+<h1 class="mb-4 border-bottom">
+  Posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})
+</h1>
+{% for post in posts %}
 <article class="media content-section">
   <a href="{% url 'user-posts' post.author.username %}">
     <img

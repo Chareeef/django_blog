@@ -98,6 +98,11 @@ a {
   border-color: firebrick;
 }
 
+.btn-outline-danger {
+  background-color: white;
+  color: #b02222;
+}
+
 .btn-danger {
   background-color: #b02222;
   color: white;
