@@ -11,10 +11,10 @@ class Profile(models.Model):
     image = models.ImageField(
         default='profile_pics/default.jpg', upload_to='profile_pics')
 
-    def save(self):
+    def save(self, *args, **kwargs):
         """Override save method to resize large images
         """
-        super().save()
+        super().save(*args, **kwargs)
 
         # Check the image's size
         img = Image.open(self.image.path)
