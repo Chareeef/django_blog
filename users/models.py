@@ -11,17 +11,7 @@ class Profile(models.Model):
     image = models.ImageField(
         default='profile_pics/default.jpg', upload_to='profile_pics')
 
-    def save(self, *args, **kwargs):
-        """Override save method to resize large images
-        """
-        super().save(*args, **kwargs)
-
-        # Check the image's size
-        img = Image.open(self.image.path)
-        if img.height > 300 or img.width > 300:
-            # Resize and save
-            img.thumbnail((300, 300))
-            img.save(self.image.path)
+    # We might want to resize images using AWS lambda function
 
     def __repr__(self):
         """Profile's literal representation
