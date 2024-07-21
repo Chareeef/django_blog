@@ -115,6 +115,7 @@ a {
 
 /* Quote of the day */
 .blockquote-div {
+  position: fixed;
   text-align: center;
   margin-top: 50px;
 }

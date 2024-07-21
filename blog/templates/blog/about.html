@@ -1,3 +1,81 @@
 {% extends 'blog/base.html' %} {% block content %}
-<h1 class="mb-4 border-bottom">About Page</h1>
+<div class="container">
+  <h1 class="mb-4 border-bottom">About Page</h1>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <p>
+        Welcome to my Django Blog Application! This platform was developed with
+        the purpose of connecting users through posts and interactions. Below is
+        an overview of what you can do on this application:
+      </p>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>User Registration and Profiles:</strong> Create an account and
+          set your profile picture.
+        </li>
+        <li class="list-group-item">
+          <strong>Posting and Viewing:</strong> Share your thoughts and see what
+          others have posted, with an efficient pagination system to manage
+          large amounts of content.
+        </li>
+        <li class="list-group-item">
+          <strong>Quote of the Day:</strong> Enjoy a new inspirational quote
+          every day.
+        </li>
+        <li class="list-group-item">
+          <strong>File Upload to AWS S3:</strong> Securely upload and store your
+          files on AWS S3.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <p>
+        This blog application is built using Django, a powerful web framework
+        that enables rapid development and clean, pragmatic design. Here are
+        some key aspects of the development process:
+      </p>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          Manipulated Django settings to customize the application environment.
+        </li>
+        <li class="list-group-item">
+          Created and managed models and views to handle the core functionality
+          of the app.
+        </li>
+        <li class="list-group-item">
+          Implemented pagination to manage and display large datasets
+          effectively.
+        </li>
+        <li class="list-group-item">
+          Integrated AWS S3 for storing and retrieving application files.
+        </li>
+        <li class="list-group-item">
+          Deployed the application on Heroku, ensuring smooth and scalable
+          deployment.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <p>
+        This project was inspired by a tutorial by Corey Schafer. You can watch
+        the original tutorial
+        <a
+          href="https://youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&si=NNzYCy0nEx5za9a0"
+          target="_blank"
+          >here</a
+        >. I've added additional functionalities to have fun. I hope you enjoy
+        using this application as much as I enjoyed building it!
+      </p>
+    </div>
+  </div>
+</div>
 {% endblock content %}
