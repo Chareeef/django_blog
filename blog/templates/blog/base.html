@@ -86,18 +86,12 @@
           {% endfor %} {% endif %} {% block content %}{% endblock %}
         </div>
         <div class="col-md-4">
-          <div class="content-section">
-            <h3>Our Sidebar</h3>
-            <ul class="list-group">
-              <li class="list-group-item list-group-item-light">
-                Latest Posts
-              </li>
-              <li class="list-group-item list-group-item-light">
-                Announcements
-              </li>
-              <li class="list-group-item list-group-item-light">Calendars</li>
-              <li class="list-group-item list-group-item-light">etc</li>
-            </ul>
+          <div class="content-section blockquote-div">
+            <h2 class="quote-header pb-2 border-bottom">Quote of the day</h2>
+            <blockquote class="blockquote">
+              <p class="mb-3 mt-3">{{ quote.text }}</p>
+              <footer class="blockquote-footer">{{ quote.author }}</footer>
+            </blockquote>
           </div>
         </div>
       </div>

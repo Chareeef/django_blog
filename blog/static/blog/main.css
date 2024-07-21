@@ -112,3 +112,26 @@ a {
   background-color: grey;
   color: white;
 }
+
+/* Quote of the day */
+.blockquote-div {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.quote-header {
+  font-family: "Georgia", serif;
+  color: firebrick;
+  margin-bottom: 20px;
+}
+
+.blockquote {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #a52a2a; /* brown, close to firebrick */
+  font-size: 1.5em;
+}
+
+.blockquote-footer {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #8b0000; /* darkred */
+}
